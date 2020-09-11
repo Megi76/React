@@ -5,8 +5,11 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component {
   static PropTypes = {
-    title: PropTypes.node,
+    title: PropTypes.node.isRequired,
     children: PropTypes.node,
+  }
+  static defaultProps = {
+    children: <p> I can do all the things!!!</p>,
   }
   render() {
     return (
