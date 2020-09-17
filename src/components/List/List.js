@@ -8,16 +8,17 @@ import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
 
 class List extends React.Component {
-  state = {
-    columns:this.props.columns || [],
-  }
-  static PropTypes = {
+  static propTypes = {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
+    image: PropTypes.string,
   }
   static defaultProps = {
     description: settings.defaultListDescription,
+  }
+  state = {
+    columns:this.props.columns || [],
   }
   addColumn(title){
     this.setState(state => (
@@ -28,28 +29,28 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
   render() {
     return (
       <section className ={styles.component}>
-       <Hero titleText={this.props.title}
-             imageImage={this.props.image} />
-       <div className={styles.description}>
-        {ReactHtmlParser(this.props.description)}
-       </div>
-       <div className={styles.columns}>
-         {this.state.columns.map(({key, ...columnProps}) => (<Column key={key} {...columnProps} /> ))}
-       </div>
-       <div className ={styles.creator}>
-         <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
-       </div>
+        <Hero titleText={this.props.title}
+          imageImage={this.props.image} />
+        <div className={styles.description}>
+          {ReactHtmlParser(this.props.description)}
+        </div>
+        <div className={styles.columns}>
+          {this.state.columns.map(({key, ...columnProps}) => (<Column key={key} {...columnProps} /> ))}
+        </div>
+        <div className ={styles.creator}>
+          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
+        </div>
       </section>
-    )
+    );
   }
 }
 
