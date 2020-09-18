@@ -29,7 +29,7 @@ class Column extends React.Component {
             {cards.map(cardData => (
               <Card key={cardData.id} {...cardData} /> ))}
           </div>
-          {/*}
+          {/*
           <div>
             <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
           </div>
