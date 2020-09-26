@@ -80,6 +80,21 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+
+  {
+    id: 'list-2',
+    title: 'Stuff to buy <sup>now!</sup>',
+    description: 'Important things I want to buy!',
+    image: 'https://www.freevector.com/uploads/vector/preview/19276/BabyCartoon_07_Preview.jpg',
+  },
+
+  {
+    id: 'list-3',
+    title: 'Contact List <sup>main!</sup>',
+    description: 'Important contacts list',
+    image: 'https://www.vippng.com/png/detail/88-884888_how-to-shake-hands-contact-us-cartoon-png.png',
+  },
+
 ];
 
 const columns = [
