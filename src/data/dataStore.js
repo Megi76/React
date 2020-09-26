@@ -12,6 +12,7 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  iconNav: 'coffee',
 };
 
 export const pageContents = {
@@ -141,6 +142,18 @@ const cards = [
   },
 ];
 
+export const info = {
+  title: 'Info',
+  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sed? Perferendis nobis sit cupiditate hic!',
+  image: 'https://bobheinmortgage.com/wp-content/uploads/2018/09/Cartoon-Space.jpg',
+};
+
+export const faq = {
+  title: 'FAQ',
+  content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, sed? Perferendis nobis sit cupiditate hic!',
+  image: 'https://sneyd.alphaacademiestrust.co.uk/wp-content/uploads/sites/6/2019/01/deep-colorful-outer-space-cartoon-illustration.jpg',
+};
+
 const initialStoreData = {
   app: {...pageContents},
   lists: [...lists],
@@ -149,3 +162,5 @@ const initialStoreData = {
 };
 
 export default initialStoreData;
+
+
