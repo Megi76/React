@@ -119,9 +119,16 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
-    icon: 'question',
+    title: 'Food',
+    icon: 'utensils',
   },
+  {
+    id: 'column-5',
+    listId: 'list-2',
+    title: 'Sport',
+    icon: 'running',
+  },
+
 ];
 
 const cards = [
